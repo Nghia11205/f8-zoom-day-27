@@ -1,0 +1,122 @@
+html,
+body {
+    height: 100%;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #fdfbfb, #ebedee);
+    overflow: hidden;
+}
+
+/* Container chính */
+.swipe-container {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Vùng chứa các card */
+.swipe-card {
+    position: relative;
+    width: 90vw;
+    max-width: 400px;
+    height: 75vh;
+    max-height: 600px;
+    perspective: 1000px;
+}
+
+/* Mỗi card */
+.swipe-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+/* Overlay hiệu ứng khi vuốt */
+.swipe-item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: var(--color, transparent);
+    opacity: var(--opacity, 0);
+    transition: opacity 0.3s ease;
+}
+
+/* Tên người chơi */
+.swipe-item__name {
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 20px;
+    margin-bottom: 24px;
+    font-size: 20px;
+    font-weight: bold;
+    backdrop-filter: blur(5px);
+}
+
+/* Nút like/dislike (tuỳ chỉnh nếu cần) */
+.buttons {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 24px;
+    z-index: 10;
+}
+
+.action-btn {
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s;
+}
+
+.action-btn:hover {
+    transform: scale(1.1);
+}
+
+.dislike-btn {
+    color: #ff4b5c;
+}
+
+.like-btn {
+    color: #4de67e;
+}
+.action-btn.active {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.3));
+    transition: 0.2s ease;
+}
+
+/* Responsive mobile */
+@media (max-width: 500px) {
+    .swipe-item__name {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .action-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+}

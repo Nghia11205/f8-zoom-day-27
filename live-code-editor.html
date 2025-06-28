@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Live-Code-Editor</title>
+        <link rel="stylesheet" href="./css/live-code-editor.css" />
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="editor-pane">
+                <textarea
+                    class="code-editor"
+                    placeholder="Nhập nội dung HTML tại đây..."
+                ></textarea>
+            </div>
+            <div class="preview-pane">
+                <iframe class="preview-frame"></iframe>
+            </div>
+        </div>
+        <ul class="context-menu" hidden>
+            <li class="context-item edit">📝 <span>Chỉnh sửa</span></li>
+            <li class="context-item delete">❌ <span>Xoá</span></li>
+            <li class="context-item copy">📋 <span>Sao chép</span></li>
+            <li class="context-item reset">🔄 <span>Làm mới</span></li>
+        </ul>
+        <script src="./live-code-editor.js"></script>
+    </body>
+</html>

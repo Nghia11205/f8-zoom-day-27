@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Slideshow</title>
+        <link rel="stylesheet" href="./css/reset.css" />
+        <link rel="stylesheet" href="./css/slideshow.css" />
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="slideshow-container">
+                <div class="inner">
+                    <div class="slide" data-index="1">
+                        <img src="./images/slide1.jpg" alt="Slide 1" />
+                    </div>
+                    <div class="slide" data-index="2">
+                        <img src="./images/slide2.jpg" alt="Slide 2" />
+                    </div>
+                    <div class="slide" data-index="3">
+                        <img src="./images/slide3.jpg" alt="Slide 3" />
+                    </div>
+                    <div class="slide" data-index="4">
+                        <img src="./images/slide4.jpg" alt="Slide 4" />
+                    </div>
+                    <div class="slide" data-index="5">
+                        <img src="./images/slide5.jpg" alt="Slide 5" />
+                    </div>
+                </div>
+                <div class="controls">
+                    <button class="prev btn">&#10094;</button>
+                    <button class="next btn">&#10095;</button>
+                </div>
+            </div>
+            <div class="dots">
+                <span class="dot active" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+                <span class="dot" data-index="3"></span>
+                <span class="dot" data-index="4"></span>
+                <span class="dot" data-index="5"></span>
+            </div>
+        </div>
+        <script src="./slideshow.js"></script>
+    </body>
+</html>
