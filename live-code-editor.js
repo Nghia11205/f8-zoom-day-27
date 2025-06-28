@@ -7,7 +7,7 @@ codeEditor.oninput = function (event) {
     previewFrame.setAttribute("srcdoc", this.value);
 };
 window.onbeforeunload = function (e) {
-    return "Bạn có chắc chắn muốn rời khỏi trang này không? Dữ liệu chưa được lưu có thể bị mất.";
+    return;
 };
 
 const wrapper = document.querySelector(".wrapper");
