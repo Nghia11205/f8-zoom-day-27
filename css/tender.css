@@ -6,7 +6,6 @@ body {
     overflow: hidden;
 }
 
-/* Container chính */
 .swipe-container {
     position: relative;
     height: 100vh;
@@ -18,7 +17,6 @@ body {
     gap: 40px;
 }
 
-/* Vùng chứa các card */
 .swipe-card {
     position: relative;
     width: 90vw;
@@ -28,7 +26,6 @@ body {
     perspective: 1000px;
 }
 
-/* Mỗi card */
 .swipe-item {
     position: absolute;
     width: 100%;
@@ -44,7 +41,6 @@ body {
     overflow: hidden;
 }
 
-/* Overlay hiệu ứng khi vuốt */
 .swipe-item::before {
     content: "";
     position: absolute;
@@ -54,7 +50,6 @@ body {
     transition: opacity 0.3s ease;
 }
 
-/* Tên người chơi */
 .swipe-item__name {
     z-index: 2;
     background-color: rgba(0, 0, 0, 0.6);
@@ -67,7 +62,6 @@ body {
     backdrop-filter: blur(5px);
 }
 
-/* Nút like/dislike (tuỳ chỉnh nếu cần) */
 .buttons {
     position: absolute;
     bottom: 24px;
@@ -107,7 +101,6 @@ body {
     transition: 0.2s ease;
 }
 
-/* Responsive mobile */
 @media (max-width: 500px) {
     .swipe-item__name {
         font-size: 16px;
