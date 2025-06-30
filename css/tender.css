@@ -1,5 +1,6 @@
 html,
 body {
+    -webkit-tap-highlight-color: transparent;
     height: 100%;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #fdfbfb, #ebedee);

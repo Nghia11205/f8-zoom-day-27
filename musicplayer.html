@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Admin</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="./css/reset.css" />
+        <link rel="stylesheet" href="./css/musicplayer.css" />
+    </head>
+    <body>
+        <section class="Sidebar">
+            <div class="Sidebar-Logo">
+                <img
+                    class="Sidebar-Logo__IMG"
+                    src="./images/logo.png"
+                    alt="Logo"
+                />
+                <h2 class="Sidebar-Logo__text">CT188</h2>
+            </div>
+
+            <ul class="Sidebar-navlist">
+                <li class="Sidebar-navlist__items">
+                    <a href="./admin.html">
+                        <img src="./images/home.png" alt="SongNote" />
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="Sidebar-navlist__items">
+                    <a href="./manage.html">
+                        <i class="fa-solid fa-music"></i>
+                        <span>Manage</span>
+                    </a>
+                </li>
+            </ul>
+            <footer class="Sidebar__footer">
+                <span>Terms & Privacy</span>
+                <span>Help?</span>
+            </footer>
+        </section>
+
+        <div class="wrapper">
+            <section class="Header">
+                <div class="Header-searchbox">
+                    <img
+                        class="Header-searchbox__IMG"
+                        src="./images/search.png"
+                        alt="Search"
+                    />
+                    <input
+                        class="Header-searchbox__input"
+                        type="text"
+                        placeholder="Search"
+                    />
+                </div>
+
+                <div class="Header-SignLog">
+                    <a href="#">Sign up</a>
+                    <a href="#">Log In</a>
+                </div>
+            </section>
+
+            <section class="main">
+                <div class="background">
+                    <div class="circle circle--1"></div>
+                    <div class="circle circle--2"></div>
+                    <div class="circle circle--3"></div>
+                    <div class="circle circle--4"></div>
+                    <div class="circle circle--5"></div>
+                    <div class="circle circle--6"></div>
+                </div>
+                <div class="main-content">
+                    <section class="hero-section">
+                        <h1 class="hero-title">
+                            Where words fail, music speaks.
+                        </h1>
+                        <p class="hero-subtitle">
+                            Every song is a new beginning.
+                        </p>
+                        <button class="btn-add-song">
+                            <div class="btn-icon">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                            <span>Add song</span>
+                        </button>
+                    </section>
+                    <div class="music-dashboard">
+                        <div class="song-list">
+                            <div class="song-list__header">
+                                <span>#</span>
+                                <span>Title</span>
+                                <span>Album</span>
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="lucide lucide-gauge"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path d="M12 13v-2" />
+                                    <path d="M13.41 10.59l1.42-1.42" />
+                                    <path d="M4.22 19.78a10 10 0 1 1 15.56 0" />
+                                </svg>
+                                <span
+                                    ><i class="fa-solid fa-ellipsis"></i
+                                ></span>
+                            </div>
+                            <ul class="song-list__main"></ul>
+                        </div>
+                        <div class="now-playing">
+                            <div class="now-playing__image">
+                                <img
+                                    src="./images/image1.png"
+                                    alt="Current song"
+                                />
+                                <button class="now-playing__favorite">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-solid fa-heart hidden"></i>
+                                </button>
+                            </div>
+                            <div class="now-playing__info">
+                                <h3 class="now-playing__title">
+                                    Kho Gi Nga Lu
+                                </h3>
+                                <p class="now-playing__artist">
+                                    Sonam Wangchen, Kelden Lhamo
+                                </p>
+                            </div>
+                            <div class="now-playing__progress">
+                                <input
+                                    type="range"
+                                    class="now-playing__seekbar"
+                                    min="0"
+                                    max="100"
+                                    value="0"
+                                />
+                                <div class="now-playing__time">
+                                    <span class="now-playing__time--current"
+                                        >0:00</span
+                                    >
+                                    <span class="now-playing__time--duration"
+                                        >4:43</span
+                                    >
+                                </div>
+                            </div>
+                            <div class="now-playing__controls">
+                                <button class="now-playing__btn--repeat">
+                                    <i class="fa-solid fa-repeat"></i>
+                                </button>
+                                <button class="now-playing__btn--backward-step">
+                                    <i class="fa-solid fa-backward-step"></i>
+                                </button>
+                                <button class="now-playing__btn--play">
+                                    <i class="fa-solid fa-play"></i>
+                                    <i class="fa-solid fa-pause hidden"></i>
+                                </button>
+                                <button class="now-playing__btn--forward-step">
+                                    <i class="fa-solid fa-forward-step"></i>
+                                </button>
+                                <button class="now-playing__btn--shuffle">
+                                    <i class="fa-solid fa-shuffle"></i>
+                                </button>
+                            </div>
+                            <audio src=""></audio>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="modal">
+            <section class="modal__add-song">
+                <div class="modal-close">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <h2>Add song</h2>
+                <form class="form-add" autocomplete="off" spellcheck="false">
+                    <div class="form-group">
+                        <label class="form-label">
+                            <span>Song Title</span>
+                            <input
+                                type="text"
+                                name="title"
+                                id="title"
+                                class="form-input"
+                            />
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">
+                            <span>Artist</span>
+                            <input
+                                type="text"
+                                name="artist"
+                                id="artist"
+                                class="form-input"
+                            />
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">
+                            <span>Album</span>
+                            <input
+                                type="text"
+                                name="album"
+                                id="album"
+                                class="form-input"
+                            />
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">
+                            <span>Duration</span>
+                            <input
+                                type="time"
+                                name="duration"
+                                id="duration"
+                                class="form-input"
+                            />
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">
+                            <span>Attach Song File</span>
+                            <div class="upload">
+                                <i class="fa-solid fa-file-audio"></i>
+                                <span>Tính năng chưa update</span>
+                                <input
+                                    type="file"
+                                    name="song"
+                                    id="song"
+                                    class="form-input"
+                                    hidden
+                                />
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">
+                            <span>Upload Cover Image</span>
+                            <div class="upload">
+                                <i class="fa-regular fa-image"></i>
+                                <span>Upload or Drop a file</span>
+                                <input
+                                    type="file"
+                                    name="image"
+                                    id="image"
+                                    class="form-input"
+                                    hidden
+                                />
+                            </div>
+                        </label>
+                    </div>
+                    <button class="form-btn">
+                        <span>Add Song</span>
+                    </button>
+                </form>
+            </section>
+        </div>
+        <div class="toast-container" id="toastContainer"></div>
+        <script src="./musicplayer.js"></script>
+    </body>
+</html>
